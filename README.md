@@ -9,7 +9,11 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![No dependencies](https://img.shields.io/badge/dependencies-0-16C5D8?style=flat-square)
 
-![Desktop preview of the hero section](docs/screenshots/desktop-hero.webp)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_site-16C5D8?style=for-the-badge&logo=githubpages&logoColor=white)](https://svetlanavrabie.github.io/Template-website-my-Galery/)
+
+**[View the live demo →](https://svetlanavrabie.github.io/Template-website-my-Galery/)**
+
+[![Desktop preview of the hero section](docs/screenshots/desktop-hero.webp)](https://svetlanavrabie.github.io/Template-website-my-Galery/)
 
 </div>
 
