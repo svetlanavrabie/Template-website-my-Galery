@@ -1,95 +1,327 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>Simpleflexbox</title>
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Pacifico" rel="stylesheet"> 
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Gallery — Music &amp; Photography</title>
+  <meta name="description" content="A curated gallery of music photography — a responsive HTML5, CSS3 &amp; JavaScript template built with Flexbox and CSS Grid.">
+  <meta name="theme-color" content="#101827">
+  <meta property="og:title" content="My Gallery — Music &amp; Photography">
+  <meta property="og:description" content="A curated gallery of music photography built with modern HTML5, CSS3 &amp; JavaScript.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="image/optimized/hero-1125.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101827'/%3E%3Cpath d='M9 22V10l7 7 7-7v12' fill='none' stroke='%2316C5D8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <nav class="main-menu">
-  <ul>
-    <li><a href="">Home</a></li>
-    <li><a href="">Galery</a></li>
-    <li><a href="">Contact</a></li>
-    <li><a href="">About</a></li>
-  </ul>
-</nav>
-<header>
-  <div class="banner-text">
-    <h1>This is  my Galery</h1>
-  </div>  
-</header>
+  <header class="site-header" data-header>
+    <nav class="nav container" aria-label="Main">
+      <a class="nav__brand" href="#home" aria-label="My Gallery — back to top">
+        <span class="nav__logo" aria-hidden="true">M</span>
+        <span class="nav__brand-text">My<span class="text-accent">Gallery</span></span>
+      </a>
 
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+        <span class="visually-hidden">Open menu</span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
 
-<div class="call-outs-container">
-  <div class="call-out">
-    <h4>Feature 1</h4>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero porro quidem nostrum. Quaerat non similique iusto, iure recusandae ducimus vel atque? Minima adipisci laboriosam nesciunt molestiae eligendi ab provident dolorum?</p>
-  </div>
-    <div class="call-out">
-    <h4>Feature 2</h4>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.nesciunt molestiae eligendi ab provident dolorum?</p>
-  </div>
-    <div class="call-out">
-    <h4>Feature 3</h4>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero porro quidem nostrum. Quaerat non similique iusto, iure recusandae ducimus vel atque? Minima adipisci laboriosam nesciunt molestiae eligendi ab provident dolorum?</p>
-  </div>
-</div>
+      <ul class="nav__menu" id="nav-menu" data-nav-menu>
+        <li><a class="nav__link" href="#home" aria-current="true">Home</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#gallery">Gallery</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="columns-layout">
-  <div class=" columns main-column">
-    <h1>Hello</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore enim hic eaque minus repudiandae vero itaque non sequi! Dignissimos aliquam natus quae error pariatur, quis recusandae quo minima neque molestias?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore enim hic eaque minus repudiandae vero itaque non sequi! Dignissimos aliquam natus quae error pariatur, quis recusandae quo minima neque molestias?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore enim hic eaque minus repudiandae vero itaque non sequi! Dignissimos aliquam natus quae error pariatur, quis recusandae quo minima neque molestias?</p>
-  </div>
-<!--   <div class="columns sidebar-one">
-    <h1>Sidebare one</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error nulla magnam illum. Excepturi nobis voluptatum ipsam culpa nisi, officia, repellat obcaecati nostrum possimus, quod cupiditate impedit id eveniet maxime iste?</p>
-  </div> -->
-  <div class="columns sidebar-two">
-     <h1>Sidebare two</h1>
-      <div class="column-sidebar first">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, assumenda?</p>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title" data-section>
+      <picture class="hero__media">
+        <source type="image/avif" srcset="image/optimized/hero-480.avif 480w, image/optimized/hero-800.avif 800w, image/optimized/hero-1125.avif 1125w" sizes="100vw">
+        <source type="image/webp" srcset="image/optimized/hero-480.webp 480w, image/optimized/hero-800.webp 800w, image/optimized/hero-1125.webp 1125w" sizes="100vw">
+        <img class="hero__image" src="image/optimized/hero-800.jpg" width="1125" height="750" alt="" fetchpriority="high" decoding="async">
+      </picture>
+
+      <div class="hero__content container">
+        <p class="eyebrow hero__eyebrow">Music · Photography · Stories</p>
+        <h1 class="hero__title" id="hero-title">This is my <span class="text-accent">Gallery</span></h1>
+        <p class="hero__lead">A curated collection of moments where light, sound and emotion meet — from quiet bedroom sessions to roaring crowds.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#gallery">
+            Explore the gallery
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#about">About the project</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="features-title">Features</h2>
+        <ul class="features__grid" data-reveal-group>
+          <li class="card feature" data-reveal>
+            <span class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            </span>
+            <h3 class="feature__title">Curated collection</h3>
+            <p>Ten hand-picked photographs that capture the energy, intimacy and joy of making music — arranged in a modern, adaptive grid.</p>
+          </li>
+          <li class="card feature" data-reveal>
+            <span class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="14" height="10" rx="1.5"/><rect x="17" y="8" width="5" height="12" rx="1.5"/><path d="M6 18h6"/></svg>
+            </span>
+            <h3 class="feature__title">Responsive by design</h3>
+            <p>Built mobile-first with Flexbox, CSS Grid and fluid typography, so every layout feels intentional from 320px phones to ultrawide displays.</p>
+          </li>
+          <li class="card feature" data-reveal>
+            <span class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <h3 class="feature__title">Immersive viewing</h3>
+            <p>Open any image in a full-screen, keyboard-friendly viewer with swipe support and optimised AVIF and WebP delivery.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title" data-section>
+      <div class="container about__layout">
+        <article class="card about__main" data-reveal>
+          <p class="eyebrow">About</p>
+          <h2 class="section__title" id="about-title">Hello, and welcome</h2>
+          <p>This project started as a small experiment with Flexbox and has grown into a showcase of modern front-end craft: semantic HTML, a token-based design system and carefully tuned interactions.</p>
+          <p>Every photograph tells a story about music — the concentration of a lone guitarist in the dark, the unfiltered happiness of a performer on stage, or the quiet calm of an instrument resting in morning light.</p>
+          <p>Take your time, scroll through the collection and open any image to see it up close.</p>
+        </article>
+
+        <aside class="about__aside" aria-labelledby="highlights-title" data-reveal-group>
+          <h3 class="about__aside-title" id="highlights-title" data-reveal>Highlights</h3>
+          <div class="card highlight" data-reveal>
+            <p class="highlight__value">10</p>
+            <p>Hand-picked photographs of musicians, instruments and live moments.</p>
+          </div>
+          <div class="card highlight" data-reveal>
+            <p class="highlight__value">0</p>
+            <p>Frameworks or libraries — just HTML5, modern CSS and a few lines of vanilla JavaScript.</p>
+          </div>
+          <div class="card highlight" data-reveal>
+            <p class="highlight__value">AVIF</p>
+            <p>Next-gen images with WebP and JPEG fallbacks, lazy loading and responsive sizes.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title" data-section>
+      <div class="container">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow">Gallery</p>
+          <h2 class="section__title" id="gallery-title">Moments in music</h2>
+          <p class="section__lead">Select any photograph to open it in the viewer. Use the arrow keys or swipe to browse.</p>
+        </header>
+
+        <ul class="gallery__grid" data-reveal-group>
+          <li class="gallery__item gallery__item--featured" data-reveal>
+            <a class="gallery__link" href="image/img10.jpeg" data-lightbox data-title="Morning Strings">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img10-480.avif 480w, image/optimized/img10-800.avif 800w, image/optimized/img10-1125.avif 1125w" sizes="(min-width: 1024px) min(50vw, 640px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img10-480.webp 480w, image/optimized/img10-800.webp 800w, image/optimized/img10-1125.webp 1125w" sizes="(min-width: 1024px) min(50vw, 640px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img10-800.jpg" width="800" height="533" alt="An acoustic guitar resting on rumpled white bed sheets in soft morning light" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">01 · Acoustic</span>
+                <span class="gallery__title">Morning Strings</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <a class="gallery__link" href="image/img1.jpg" data-lightbox data-title="Close to the Strings">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img1-480.avif 480w, image/optimized/img1-800.avif 800w, image/optimized/img1-1125.avif 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img1-480.webp 480w, image/optimized/img1-800.webp 800w, image/optimized/img1-1125.webp 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img1-800.jpg" width="800" height="533" alt="Close-up of a hand strumming a dark electric guitar" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">02 · Electric</span>
+                <span class="gallery__title">Close to the Strings</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <a class="gallery__link" href="image/img2.jpeg" data-lightbox data-title="Amplified">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img2-480.avif 480w, image/optimized/img2-800.avif 800w, image/optimized/img2-1125.avif 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img2-480.webp 480w, image/optimized/img2-800.webp 800w, image/optimized/img2-1125.webp 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img2-800.jpg" width="800" height="533" alt="A guitarist with a white electric guitar seated in front of stacked Marshall amplifiers" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">03 · Studio</span>
+                <span class="gallery__title">Amplified</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <a class="gallery__link" href="image/img3.jpeg" data-lightbox data-title="Stage Joy">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img3-480.avif 480w, image/optimized/img3-800.avif 800w, image/optimized/img3-1125.avif 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img3-480.webp 480w, image/optimized/img3-800.webp 800w, image/optimized/img3-1125.webp 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img3-800.jpg" width="800" height="533" alt="A smiling musician in a headband playing a ukulele on a brightly lit stage" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">04 · Live</span>
+                <span class="gallery__title">Stage Joy</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <a class="gallery__link" href="image/img4.jpg" data-lightbox data-title="Above the Valley">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img4-480.avif 480w, image/optimized/img4-800.avif 800w, image/optimized/img4-1125.avif 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img4-480.webp 480w, image/optimized/img4-800.webp 800w, image/optimized/img4-1125.webp 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img4-800.jpg" width="800" height="533" alt="A man in a red beanie playing acoustic guitar on a rock high above a lake valley" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">05 · Outdoors</span>
+                <span class="gallery__title">Above the Valley</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+          <li class="gallery__item gallery__item--featured" data-reveal>
+            <a class="gallery__link" href="image/img5.jpeg" data-lightbox data-title="Little Rockstar">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img5-480.avif 480w, image/optimized/img5-800.avif 800w, image/optimized/img5-1125.avif 1125w" sizes="(min-width: 1024px) min(50vw, 640px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img5-480.webp 480w, image/optimized/img5-800.webp 800w, image/optimized/img5-1125.webp 1125w" sizes="(min-width: 1024px) min(50vw, 640px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img5-800.jpg" width="800" height="533" alt="A toddler with a spiked mohawk proudly holding a white electric guitar" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">06 · Portrait</span>
+                <span class="gallery__title">Little Rockstar</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <a class="gallery__link" href="image/img6.jpeg" data-lightbox data-title="Into the Dark">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img6-480.avif 480w, image/optimized/img6-800.avif 800w, image/optimized/img6-1125.avif 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img6-480.webp 480w, image/optimized/img6-800.webp 800w, image/optimized/img6-1125.webp 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img6-800.jpg" width="800" height="533" alt="A guitarist emerging from deep shadow while playing" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">07 · Mood</span>
+                <span class="gallery__title">Into the Dark</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <a class="gallery__link" href="image/img7.jpeg" data-lightbox data-title="Neon Chords">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img7-480.avif 480w, image/optimized/img7-800.avif 800w, image/optimized/img7-1125.avif 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img7-480.webp 480w, image/optimized/img7-800.webp 800w, image/optimized/img7-1125.webp 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img7-800.jpg" width="800" height="533" alt="Hands on an electric guitar bathed in purple and amber stage light" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">08 · Live</span>
+                <span class="gallery__title">Neon Chords</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <a class="gallery__link" href="image/img8.jpeg" data-lightbox data-title="Crowd Surf">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img8-480.avif 480w, image/optimized/img8-800.avif 800w, image/optimized/img8-1125.avif 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img8-480.webp 480w, image/optimized/img8-800.webp 800w, image/optimized/img8-1125.webp 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img8-800.jpg" width="800" height="533" alt="Black-and-white photo of a guitarist crowd surfing with his guitar raised high" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">09 · Concert</span>
+                <span class="gallery__title">Crowd Surf</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <a class="gallery__link" href="image/img9.jpeg" data-lightbox data-title="Quiet Focus">
+              <picture>
+                <source type="image/avif" srcset="image/optimized/img9-480.avif 480w, image/optimized/img9-800.avif 800w, image/optimized/img9-1125.avif 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <source type="image/webp" srcset="image/optimized/img9-480.webp 480w, image/optimized/img9-800.webp 800w, image/optimized/img9-1125.webp 1125w" sizes="(min-width: 1024px) min(25vw, 320px), (min-width: 480px) 50vw, 100vw">
+                <img class="gallery__image" src="image/optimized/img9-800.jpg" width="800" height="533" alt="A man with glasses playing guitar in a soft monochrome portrait" loading="lazy" decoding="async">
+              </picture>
+              <span class="gallery__caption" aria-hidden="true">
+                <span class="gallery__tag">10 · Portrait</span>
+                <span class="gallery__title">Quiet Focus</span>
+              </span>
+              <span class="visually-hidden">— open in viewer</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact" data-section>
+    <div class="container site-footer__inner" data-reveal>
+      <p class="eyebrow">Contact</p>
+      <h2 class="site-footer__title">Let’s build something <span class="text-accent">together</span>.</h2>
+      <p class="site-footer__text">This started as my test with <strong>Flexbox</strong> — explore the source code or reach out on GitHub.</p>
+      <div class="site-footer__actions">
+        <a class="btn btn--primary" href="https://github.com/svetlanavrabie" target="_blank" rel="noopener noreferrer">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          Visit my GitHub · Svetlana&nbsp;Vrabie
+          <span class="visually-hidden">(opens in a new tab)</span>
+        </a>
+        <a class="btn btn--ghost" href="https://github.com/svetlanavrabie/Template-website-my-Galery" target="_blank" rel="noopener noreferrer">
+          View source code
+          <span class="visually-hidden">(opens in a new tab)</span>
+        </a>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <time datetime="2026">2026</time> by Svetlana Vrabie · Built with HTML5, CSS3 &amp; JavaScript</p>
+        <a class="link" href="#home">Back to top ↑</a>
+      </div>
     </div>
-      <div class="column-sidebar second">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt commodi molestiae consectetur quos maxime consequuntur, cumque modi iure placeat doloremque.</p>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Image viewer" data-lightbox-dialog>
+    <div class="lightbox__inner">
+      <figure class="lightbox__figure">
+        <div class="lightbox__media" data-lightbox-media></div>
+        <figcaption class="lightbox__caption">
+          <span class="lightbox__title" data-lightbox-title></span>
+          <span class="lightbox__counter" data-lightbox-counter aria-live="polite"></span>
+        </figcaption>
+      </figure>
+      <button class="lightbox__btn lightbox__btn--close" type="button" data-lightbox-close aria-label="Close viewer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <button class="lightbox__btn lightbox__btn--prev" type="button" data-lightbox-prev aria-label="Previous image">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <button class="lightbox__btn lightbox__btn--next" type="button" data-lightbox-next aria-label="Next image">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
     </div>
-      <div class="column-sidebar third">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nostrum atque illum tempora accusantium repellat.</p>
-    </div>
-  </div>
-</div>
-
-<div class="image-grid">
-  <div class="image01"></div>
-  <div class="image02"></div>
-  <div class="image03"></div>
-  <div class="image04"></div>
-  <div class="image05"></div>
-  <div class="image06"></div>
-  <div class="image07"></div>
-  <div class="image08"></div>
-  <div class="image09"></div>
-  <div class="image10"></div>
-</div>
-
-<footer>
-  <h3>This is  my test with   </h3>
-  <h1>flexbox</h1>
-</footer>
-  
-  
-
+  </dialog>
 </body>
 
 </html>
